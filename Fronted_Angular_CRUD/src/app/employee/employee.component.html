@@ -1,0 +1,30 @@
+
+
+
+
+<div class="container">   
+    
+    <h5>All Employees</h5>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">EmpId</th>
+            <th scope="col">EmpName</th>
+            <th scope="col">EmpEmail</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr  *ngFor="let e of allemployees">
+                <td>{{ e.id }} </td>
+                <td>{{e.name}}</td>
+                <td>{{e.emailId}}</td>
+                <td>
+                    <button (click)="updateEmpMeth('Employees.id')">Update</button>
+                    <button (click)="deleteEmployee('Employees.id')">Delete</button>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
